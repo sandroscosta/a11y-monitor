@@ -1,15 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  url: MyString
-  standard: MyString
-  options: MyString
-  service_id: MyString
-
-two:
-  name: MyString
-  url: MyString
-  standard: MyString
-  options: MyString
-  service_id: MyString
+fccn:
+  name: "FCCN"
+  url: "https://www.fccn.pt"
+  standard: "WCAG2AA"
+  options: ""
+  service_id: "12345"

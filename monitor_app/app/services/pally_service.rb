@@ -1,4 +1,6 @@
 class PallyService
+  include Singleton
+
   SERVICE_URL = ENV["PALLY_SERVICE_URL"] || "http://localhost:3001"
 
   def initialize
@@ -48,7 +50,6 @@ class PallyService
 
   def delete_task(id)
     response = connection.delete("/tasks/#{id}")
-    JSON.parse(response.body)
   end
 
   private
