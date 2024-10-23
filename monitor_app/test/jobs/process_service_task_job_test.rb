@@ -5,7 +5,7 @@ class ProcessServiceTaskJobTest < ActiveJob::TestCase
   def setup
     @task = { name: "Google", url: "https://www.google.com", standard: "WCAG2AA" }
     @service_task_mock = Minitest::Mock.new
-    @service_task_mock.expect(:run_task, true, [String])
+    @service_task_mock.expect(:run_task, true, [ String ])
     @service_task = ServiceTask.create(@task)
   end
 
