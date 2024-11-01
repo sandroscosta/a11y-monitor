@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  has_seal: false
+  is_active: false
+  level: 1
+
+two:
+  name: MyString
+  description: MyText
+  has_seal: false
+  is_active: false
+  level: 1

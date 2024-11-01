@@ -5,7 +5,6 @@ class ServiceTask < ApplicationRecord
 
   validates :name, presence: true
   validates :url, presence: true
-  validates :standard, presence: true
 
   def self.to_service_json(id)
     self.select(:name, :url, :standard).find(id).to_json(except: :id)
