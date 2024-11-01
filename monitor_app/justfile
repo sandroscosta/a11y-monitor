@@ -1,0 +1,27 @@
+rails := "bin/rails"
+
+default: dev
+
+migrate:
+    {{rails}} db:migrate
+
+controller params:
+    bin/rails generate controller {{params}}
+
+model params:
+    bin/rails generate model {{params}}
+
+component params:
+    bin/rails generate component {{params}}
+
+dev:
+    bin/dev
+
+console:
+    {{rails}} console
+
+routes:
+    bin/rails routes
+
+routes_by_controller controller:
+    bin/rails routes -c {{controller}}
