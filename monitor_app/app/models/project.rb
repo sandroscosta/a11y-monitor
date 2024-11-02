@@ -12,9 +12,9 @@ class Project < ApplicationRecord
     self.seal_date.present?
   end
 
-  def to_param
-    slug
-  end
+  #def to_param
+  #  slug
+  #end
 
   private
 
