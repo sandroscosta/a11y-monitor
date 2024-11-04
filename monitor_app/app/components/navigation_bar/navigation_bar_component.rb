@@ -16,6 +16,6 @@ class NavigationBar::NavigationBarComponent < ViewComponent::Base
   end
 
   def to_link(item)
-    link_to item[:title], render_url(item[:url]), class: "hover:underline hover:underline-offset-2 hover:decoration-violet-500 hover:decoration-4 hover:font-bold"
+    link_to item[:title], render_url(item[:url]), class: class_names("hover:underline hover:underline-offset-2 hover:decoration-violet-500 hover:decoration-4 hover:font-bold", "underline underline-offset-2 decoration-2": current_page?(render_url(item[:url])))
   end
 end
