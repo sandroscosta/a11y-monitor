@@ -2,9 +2,9 @@
 
 class NavigationBar::NavigationBarComponent < ViewComponent::Base
   include ActionView::Helpers::UrlHelper
-  
+
   # menu items should be placed inside the hash on the correct order
-  MENU_ITEMS = [ { :title => "Projects", :url => "root_path" }, {:title => "Results", :url => "root_path" } ].freeze
+  MENU_ITEMS = [ { title: "Projects", url: "root_path" }, { title: "Results", url: "root_path" } ].freeze
 
   def initialize
     @menu_items = MENU_ITEMS

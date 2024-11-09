@@ -1,0 +1,5 @@
+<h2 class="font-bold text-4xl">Add a new Link to <%= @project.name %></h2>
+<div class="flex justify-between bg-slate-100 rounded-xl p-6 my-6">
+    <p>Add a new link to the project. This link will be checked against the standard you selected.</p>
+</div>
+<%= render(Link::LinkFormComponent.new(@project)) %>
