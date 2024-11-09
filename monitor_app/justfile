@@ -25,3 +25,6 @@ routes:
 
 routes_by_controller controller:
     bin/rails routes -c {{controller}}
+
+lint:
+    bin/rubocop -A
