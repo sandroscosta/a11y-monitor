@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_01_185333) do
+ActiveRecord::Schema[8.1].define(version: 2024_11_09_181049) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -61,7 +61,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_01_185333) do
     t.string "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "project_id", null: false
     t.index ["name"], name: "index_service_tasks_on_name"
+    t.index ["project_id"], name: "index_service_tasks_on_project_id"
     t.index ["service_id"], name: "index_service_tasks_on_service_id"
   end
 
@@ -188,6 +190,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_01_185333) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "service_tasks", "projects"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_failed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
